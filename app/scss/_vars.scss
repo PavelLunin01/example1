@@ -1,19 +1,24 @@
-$accent: #e84545;
-$default: #6c7279;
-$title: #2d3033;
+$accent: #fe3e57;
+$default: #8d8d8d;
+$title: #29282d;
 $white: #ffffff;
 
-%raleway-400 {
-  font-family: 'Raleway-Regular', sans-serif;
+%quicksand-400 {
+  font-family: 'Quicksand-Regular', sans-serif;
   font-weight: 400;
 }
 
-%raleway-700 {
-  font-family: 'Raleway-Bold', sans-serif;
+%quicksand-500 {
+  font-family: 'Quicksand-Medium', sans-serif;
+  font-weight: 500;
+}
+
+%roboto-400 {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+}
+
+%roboto-700 {
+  font-family: 'Roboto-Bold', sans-serif;
   font-weight: 700;
-}
-
-%cardo-400 {
-  font-family: 'Cardo-Italic', sans-serif;
-  font-weight: 400;
 }
