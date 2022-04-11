@@ -3,6 +3,17 @@ body {
   height: 100%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+
+
 html {
   box-sizing: border-box;
 }
@@ -62,6 +73,3 @@ a {
   text-decoration: none;
 }
 
-.main {
-  flex-grow: 1;
-}
