@@ -30,3 +30,25 @@ a {
   color: $default;
   @extend %quicksand-500;
 }
+
+.btn-temp {
+  display: inline-block;
+  padding: 12px 26px;
+  @extend %roboto-400;
+  background-color: $accent;
+  color: $white;
+  text-transform: uppercase;
+  transition: all 0.4s;
+  outline: transparent;
+  box-shadow: 0px 7px 20px 0px rgb(255 17 48 /30%);
+  &:hover {
+    filter: brightness(120%);
+  }
+  &:active {
+    filter: brightness(90%);
+  }
+  &:focus {
+    box-shadow: 0 0 0 3px rgb(62 66 100 / 70%);
+    border-radius: 5px;
+  } 
+}

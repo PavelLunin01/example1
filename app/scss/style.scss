@@ -27,23 +27,26 @@
     border-bottom: 1px solid transparent;
     transition: all 0.4s;
     text-transform: uppercase;
+    outline: transparent;
+    @extend %roboto-400;
     &:hover {
       color: $accent;
       border-bottom: 1px solid $accent;
-    }
-    &:focus {
-      /* color: $accent;
-      border-bottom: 1px solid $accent; */
+      @extend %roboto-700;
     }
     &:active {
-      /* color: $accent;
-      border-bottom: 1px solid $accent; */
+      filter: brightness(90%);
     }
+    &:focus {
+      box-shadow: 0 0 0 3px rgb(62 66 100 / 70%);
+      border-radius: 5px;
+    } 
   }
 
   &__list-link--active {
     color: $accent;
     border-bottom: 1px solid $accent;
+    @extend %roboto-700;
   }
 }
 
@@ -56,6 +59,18 @@
 
   &__link {
     position: relative;
+    transition: all 0.4s;
+    outline: transparent;
+    &:hover {
+      filter: brightness(120%);
+    }
+    &:active {
+      filter: brightness(90%);
+    }
+    &:focus {
+      box-shadow: 0 0 0 3px rgb(62 66 100 / 70%);
+      border-radius: 5px;
+    } 
   }
 
   &__num {
@@ -215,26 +230,6 @@
       border-radius: 5px;
     } 
   }
-
-  &__form-btn {
-    padding: 12px 26px;
-    background-color: $accent;
-    color: $white;
-    text-transform: uppercase;
-    transition: all 0.4s;
-    outline: transparent;
-    box-shadow: 0px 7px 20px 0px rgb(255 17 48 / 30%);
-    &:hover {
-      filter: brightness(120%);
-    }
-    &:active {
-      filter: brightness(90%);
-    }
-    &:focus {
-      box-shadow: 0 0 0 3px rgb(62 66 100 / 70%);
-      border-radius: 5px;
-    } 
-  }
 }
 
 .footer-bottom {
@@ -248,6 +243,71 @@
   }
   &__accept-img {
     margin-left: 20px;
+  }
+}
+
+.top-slider {
+  background: url('../images/topslider/top-slider-bg.png') no-repeat center / cover;
+  padding-top: 65px 0 45px;
+  background-color: $bg;
+
+  &__container {
+    max-width: 1520px;
+  }
+  &__content {
+    padding: 125px 0 0 160px;
+  }
+  &__item {
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__title {
+    max-width: 670px;
+    margin-bottom: 30px;
+    font-size: 58px;
+    line-height: 1.1;
+    color: $title;
+    @extend %roboto-700;
+  }
+  &__text {
+    max-width: 470px;
+    margin-bottom: 55px;
+  }
+
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 0 4px;
+      margin-top: -70px;
+      button {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+        border: 1px solid transparent;
+        border-radius: 50%;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $default;
+        }
+      }
+      &.slick-active {
+        button {
+          border-color: $accent;
+          &::after {
+            background-color: $accent;
+          }
+        }
+      }
+    }
   }
 }
 @import 'media';
