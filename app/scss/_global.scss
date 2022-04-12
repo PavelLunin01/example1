@@ -52,3 +52,21 @@ a {
     border-radius: 5px;
   } 
 }
+
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 48px;
+  line-height: 1.2;
+  @extend %roboto-700;
+  color: $title;
+  text-transform: uppercase;
+}
+
+.text {
+  margin: 0 auto 54px;
+  max-width: 570px;
+  text-align: center;
+
+}
+
