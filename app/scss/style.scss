@@ -578,6 +578,64 @@
 .star {
   margin: 0 auto;
 }
+
+.promo {
+  padding: 150px 0 160px;
+  text-align: center;
+  background: url('../images/partners/partners-bg.jpg') no-repeat center / cover;
+
+  &__inner {
+     max-width: 570px;
+     width: 100%;
+     margin-left: auto;
+  }
+  &__subtitle {
+    margin-bottom: 10px;
+    color: $accent;
+    text-transform: uppercase;
+  }
+  &__clock {
+    display: flex;
+    justify-content: space-between;
+    margin:50px 0;
+  }
+  &__clock-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: $white;
+    span {
+      
+      font-size: 48px;
+      line-height: 1.1;
+      color: $title;
+      @extend %roboto-700;
+    }
+  }
+}
+
+.partners {
+  padding-top: 74px;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 170px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 @import 'media';
 
 
